@@ -29,7 +29,7 @@ import com.sogou.qadev.service.cynthia.util.CynthiaUtil;
  * @date:2014-5-6 下午6:03:09
  * @version:v1.0
  */
-public class UserInfoAccessSessionMySQL {
+public class  UserInfoAccessSessionMySQL {
 
 	public UserInfoAccessSessionMySQL() {
 

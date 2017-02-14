@@ -4,29 +4,7 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;
 
-import com.sogou.qadev.service.cynthia.bean.Action;
-import com.sogou.qadev.service.cynthia.bean.Attachment;
-import com.sogou.qadev.service.cynthia.bean.Data;
-import com.sogou.qadev.service.cynthia.bean.DataAccessAction;
-import com.sogou.qadev.service.cynthia.bean.Field;
-import com.sogou.qadev.service.cynthia.bean.Filter;
-import com.sogou.qadev.service.cynthia.bean.Flow;
-import com.sogou.qadev.service.cynthia.bean.GuideBean;
-import com.sogou.qadev.service.cynthia.bean.JSTree;
-import com.sogou.qadev.service.cynthia.bean.Option;
-import com.sogou.qadev.service.cynthia.bean.Pair;
-import com.sogou.qadev.service.cynthia.bean.QueryCondition;
-import com.sogou.qadev.service.cynthia.bean.Role;
-import com.sogou.qadev.service.cynthia.bean.Script;
-import com.sogou.qadev.service.cynthia.bean.Stat;
-import com.sogou.qadev.service.cynthia.bean.TagBean;
-import com.sogou.qadev.service.cynthia.bean.Template;
-import com.sogou.qadev.service.cynthia.bean.TemplateOperateLog;
-import com.sogou.qadev.service.cynthia.bean.TemplateType;
-import com.sogou.qadev.service.cynthia.bean.Timer;
-import com.sogou.qadev.service.cynthia.bean.TimerAction;
-import com.sogou.qadev.service.cynthia.bean.UUID;
-import com.sogou.qadev.service.cynthia.bean.UserInfo;
+import com.sogou.qadev.service.cynthia.bean.*;
 
 /**
  * @description:data process interface
@@ -1772,11 +1750,12 @@ public interface DataAccessSession
 	 * @return
 	 */
 	public String queryGuideHtmlByGuideId( String guideId);
+	public Project queryProjectByUserName(String userName);
 	
 	/**
 	 * @description:save guide by guideid
 	 * @date:2014-6-10 上午11:26:31
-	 * @version:v1.0
+	 * @version:v1.0;
 	 * @param guideId
 	 * @param guideHtml
 	 * @return
