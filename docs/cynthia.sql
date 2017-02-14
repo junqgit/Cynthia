@@ -737,3 +737,22 @@ INSERT INTO `uuid` VALUES ('626813', 'FILT');
 INSERT INTO `uuid` VALUES ('722793', 'SCRI');
 INSERT INTO `uuid` VALUES ('744289', 'FLOW');
 INSERT INTO `uuid` VALUES ('744313', 'TEMP');
+
+CREATE TABLE `project_zipon` (
+  `project_id` bigint(20) NOT NULL COMMENT '项目编号',
+  `project_title` varchar(200) COLLATE utf8_bin NOT NULL COMMENT '项目标题',
+  `company` varchar(60) COLLATE utf8_bin NOT NULL COMMENT '所属公司',
+  `begin_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '开始时间',
+  `end_time` timestamp NULL DEFAULT NULL COMMENT '结束时间',
+  `dp_price` bigint(20) DEFAULT NULL COMMENT 'DP报价',
+  `coding_price` bigint(20) DEFAULT NULL COMMENT 'coding报价',
+  `analytics_price` bigint(20) DEFAULT NULL COMMENT '高级分析',
+  `deduct` bigint(20) DEFAULT NULL COMMENT '提成',
+  `project_leader` varchar(50) COLLATE utf8_bin NOT NULL COMMENT '项目负责人',
+  `coding_leader` varchar(50) COLLATE utf8_bin NOT NULL COMMENT 'coding负责人',
+  `bill_status` char(1) COLLATE utf8_bin NOT NULL COMMENT '是否开票（0：未开 1：已开）',
+  `payment_status` char(1) COLLATE utf8_bin DEFAULT '0' COMMENT '是否收款（0：未激活；1：已激活）',
+  PRIMARY KEY (`project_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='项目表';
+
+
